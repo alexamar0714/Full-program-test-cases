@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">          
+<hibernate-configuration>
+    <session-factory>
+        <!-- properties  -->
+        <property name="connection.datasource">java:/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0b6a7b7b6762686a7f626465256f7825656a666e4b">[email protected]</a></property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="dialect">@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7c181d081d1e1d0f195218151d10191f083c">[email protected]</a></property>	
+        <property name="hibernate.transaction.factory_class">org.hibernate.transaction.JTATransactionFactory</property>
+		<property name="transaction.manager_lookup_class">org.hibernate.transaction.JBossTransactionManagerLookup</property>
+	    <property name="hibernate.connection.release_mode">auto</property>
+
+        <mapping resource="gov/nih/nci/security/authorization/domainobjects/Privilege.hbm.xml"/>
+        <mapping resource="gov/nih/nci/security/authorization/domainobjects/Application.hbm.xml"/>
+        <mapping resource="gov/nih/nci/security/authorization/domainobjects/FilterClause.hbm.xml"/>
+        <mapping resource="gov/nih/nci/security/authorization/domainobjects/Role.hbm.xml"/>
+        <mapping resource="gov/nih/nci/security/dao/hibernate/RolePrivilege.hbm.xml"/>
+        <mapping resource="gov/nih/nci/security/dao/hibernate/UserGroup.hbm.xml"/>
+        <mapping resource="gov/nih/nci/security/dao/hibernate/ProtectionGroupProtectionElement.hbm.xml"/>     
+        <mapping resource="gov/nih/nci/security/authorization/domainobjects/Group.hbm.xml"/>
+        <mapping resource="gov/nih/nci/security/authorization/domainobjects/User.hbm.xml"/>
+        <mapping resource="gov/nih/nci/security/authorization/domainobjects/ProtectionGroup.hbm.xml"/>
+        <mapping resource="gov/nih/nci/security/authorization/domainobjects/ProtectionElement.hbm.xml"/>
+        <mapping resource="gov/nih/nci/security/authorization/domainobjects/UserGroupRoleProtectionGroup.hbm.xml"/>
+        <mapping resource="gov/nih/nci/security/authorization/domainobjects/UserProtectionElement.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>

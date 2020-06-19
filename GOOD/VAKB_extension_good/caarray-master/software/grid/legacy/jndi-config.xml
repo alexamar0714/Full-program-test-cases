@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndiConfig xmlns="http://wsrf.globus.org/jndi/config">
+  <service name="SERVICE-INSTANCE-PREFIX/CaArraySvc">
+    <resource name="configuration" type="gov.nih.nci.cagrid.caarray.service.globus.resource.CaArraySvcResourceConfiguration">
+      <resourceParams>
+        <parameter>
+          <name>factory</name>
+          <value>org.globus.wsrf.jndi.BeanFactory</value>
+        </parameter>
+        <parameter>
+          <name>performRegistration</name>
+          <!-- Set this to false to skip ServiceGroup registration -->
+          <value>PERFORM_REGISTRATION</value>
+        </parameter>
+        <parameter>
+          <name>registrationTemplateFile</name>
+          <!-- Set this to the relative path (from the container root, e.g GLOBUS_LOCATION for globus container) of the registration parameters template file (ignored if performRegistration is false) -->
+          <value>ETC-PATH/CaArraySvc_registration.xml</value>
+        </parameter>
+        <parameter>
+          <name>serviceMetadataFile</name>
+          <!-- Set this to the relative path (from the container root, e.g GLOBUS_LOCATION for globus container) of the serviceMetadata extract -->
+          <value>ETC-PATH/serviceMetadata.xml</value>
+        </parameter>
+        <parameter>
+          <name>domainModelFile</name>
+          <!-- Set this to the relative path (from the container root, e.g GLOBUS_LOCATION for globus container) of the domainModel extract -->
+          <value>ETC-PATH/domainModel.xml</value>
+        </parameter>
+      </resourceParams>
+    </resource>
+    <resource name="serviceconfiguration" type="gov.nih.nci.cagrid.caarray.service.CaArraySvcConfiguration">
+      <resourceParams>
+        <parameter>
+          <name>factory</name>
+          <value>org.globus.wsrf.jndi.BeanFactory</value>
+        </parameter>
+        <parameter>
+          <name>etcDirectoryPath</name>
+          <value>ETC-PATH</value>
+        </parameter>
+        <parameter>
+          <name>queryProcessorClass</name>
+          <value>@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c0b1b5a5b2b990b2afa3a5b3b3afb283aca1b3b380">[email protected]</a></value>
+        </parameter>
+        <parameter>
+          <name>serverConfigLocation</name>
+          <value>ETC-PATH/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="11627463677463527e7f7778765d7e727065787e7f51">[email protected]</a></value>
+        </parameter>
+        <parameter>
+          <name>dataService_cqlValidatorClass</name>
+          <value>@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e98d889d88ba8c9b9f808a8cb68a9885bf8885808d889d869baa85889a9aa9">[email protected]</a></value>
+        </parameter>
+        <parameter>
+          <name>dataService_domainModelValidatorClass</name>
+          <value>@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6703061306340215110e04023803080a060e092a0803020b31060b0e0306130815240b06141427">[email protected]</a></value>
+        </parameter>
+        <parameter>
+          <name>dataService_validateCqlFlag</name>
+          <value>@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f397928792a09681859a9096ac85929f9a97928796b0829fb59f9294b3">[email protected]</a></value>
+        </parameter>
+        <parameter>
+          <name>dataService_validateDomainModelFlag</name>
+          <value>@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="096d687d685a6c7b7f606a6c567f6865606d687d6c4d666468606744666d6c654f65686e49">[email protected]</a></value>
+        </parameter>
+        <parameter>
+          <name>dataService_classMappingsFilename</name>
+          <value>ETC-PATH/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1d797c697c4e786f6b747e78427e717c6e6e507c6d6d74737a6e5b747178737c70785d">[email protected]</a></value>
+        </parameter>
+        <parameter>
+          <name>dataService_auditorsConfigFile</name>
+          <value>ETC-PATH/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6307021702300611150a00063c0216070a170c1110200c0d050a04250a0f0623">[email protected]</a></value>
+        </parameter>
+      </resourceParams>
+    </resource>
+    <resource name="home" type="gov.nih.nci.cagrid.caarray.service.globus.resource.CaArraySvcResourceHome">
+      <resourceParams>
+        <parameter>
+          <name>factory</name>
+          <value>org.globus.wsrf.jndi.BeanFactory</value>
+        </parameter>
+      </resourceParams>
+    </resource>
+  </service>
+</jndiConfig>
+

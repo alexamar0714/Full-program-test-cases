@@ -1,0 +1,35 @@
+.label-user {
+    background-color: #00CC00;
+}
+
+.label-car_user {
+    background-color: #009900;
+}
+
+.label-car_owner {
+    background-color: #006600;
+}
+
+.label-super_user {
+    background-color: #003300;
+}
+
+.label-infosession_admin {
+    background-color: #0000FF;
+}
+
+.label-contract_admin {
+    background-color: #0000CC;
+}
+
+.label-profile_admin {
+    background-color: #000099;
+}
+
+.label-reservation_admin{
+    background-color: #000066;
+}
+
+.label-car_admin {
+    background-color: #00CCCC;
+}

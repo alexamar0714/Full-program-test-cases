@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "de.vier_bier.habpanelviewer"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "0.9.14pre"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        buildConfigField "long", "TIMESTAMP", System.currentTimeMillis() + "L"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    implementation(name: 'eventsource-debug', ext: 'aar')
+    implementation 'org.jboss.netty:netty:3.2.10.Final'
+    implementation 'com.github.mukeshsolanki:MarkdownView-Android:1.0.4'
+    implementation 'com.android.support:appcompat-v7:26.+'
+    implementation 'com.android.support:support-v4:26.+'
+    implementation 'com.android.support:design:26.+'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    implementation 'com.jakewharton:process-phoenix:2.0.0'
+    testImplementation 'junit:junit:4.12'
+}

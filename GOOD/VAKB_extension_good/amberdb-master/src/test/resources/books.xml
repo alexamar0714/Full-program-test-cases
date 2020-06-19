@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+  <book>
+    <title>Colours</title>
+    <author>Steve Parish</author>
+  </book>
+  <book>
+    <title read='y'>Grandpa and Thomas</title>
+    <author>Pamela Allen</author>
+  </book>
+  <book>
+    <title>Ragamuffin</title>
+    <author>Isabel Carralo, Ronal Monlitor</author>
+  </book>
+  <book>
+    <title read='y'>The Magic Faraway Tree Collection</title>
+    <author>Enid Blyton</author>
+  </book>
+  <book>
+    <title>Northern Lights</title>
+    <author>Philip Pullman</author>
+  </book>
+</books>

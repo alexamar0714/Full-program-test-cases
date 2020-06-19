@@ -1,0 +1,33 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>mysql</groupId>
+  <artifactId>mysql-connector-java</artifactId>
+  <version>@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ffb2a6acaeb3a0bcb5a0a9baadacb6b0b1bf">[email protected]</a></version>
+  <packaging>jar</packaging>
+
+  <name>MySQL Connector/J</name>
+  <description>MySQL JDBC Type 4 driver</description>
+
+  <licenses>
+    <license>
+      <name>The GNU General Public License, Version 2</name>
+      <url>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</url>
+      <distribution>repo</distribution>
+      <comments>MySQL Connector/J contains exceptions to GPL requirements when linking with other components
+that are licensed under OSI-approved open source licenses, see EXCEPTIONS-CONNECTOR-J
+in this distribution for more details.</comments>
+    </license>
+  </licenses>
+
+  <url>http://dev.mysql.com/doc/connector-j/en/</url>
+
+  <scm>
+    <connection>scm:git:<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b4d3ddc0f4d3ddc0dcc1d69ad7dbd9">[email protected]</a>:mysql/mysql-connector-j.git</connection>
+    <url>https://github.com/mysql/mysql-connector-j</url>
+  </scm>
+
+  <organization>
+    <name>Oracle Corporation</name>
+    <url>http://www.oracle.com</url>
+  </organization>
+</project>

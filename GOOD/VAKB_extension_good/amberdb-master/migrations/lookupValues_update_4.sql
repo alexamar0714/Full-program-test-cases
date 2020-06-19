@@ -1,0 +1,2 @@
+insert into lookups (name, code, value, deleted) values ('subUnitType','Corrigendum','Corrigendum','N');,
+insert into lookups (name, code, value, deleted) values ('subUnitType','Supplementary Material','Supplementary Material','N');

@@ -1,0 +1,13 @@
+<application-policy name="@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3958494955505a584d505657175a56574d5c414d175758545c79">[email protected]</a>">
+	<authentication>
+		<login-module code="gov.nih.nci.security.authentication.loginmodules.RDBMSLoginModule" flag="required"> 
+			<module-option name="driver">@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="81e5e0f5e0e3e0f2e4afe5f3e8f7e4f3c1">[email protected]</a></module-option>
+			<module-option name="url">@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5f3b3e2b3e3d3e2c3a712a2d331f">[email protected]</a></module-option>
+			<module-option name="user">@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="670306130605061402491214021527">[email protected]</a></module-option>
+			<module-option name="passwd">@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6e0a0f1a0f0c0f1d0b401e0f1d1d19011c0a2e">[email protected]</a></module-option>
+			<module-option name="query">SELECT * FROM CSM_USER WHERE LOGIN_NAME=? and PASSWORD=?  </module-option>
+			<module-option name="encryption-enabled">YES </module-option>
+		</login-module>
+	</authentication>
+</application-policy>
+

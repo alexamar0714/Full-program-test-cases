@@ -1,0 +1,297 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Query Visualizer Demo</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+    <script type="text/javascript" src="js/json2.js"></script>
+    <script type="text/javascript" src="js/storage.js"></script>
+    <script type="text/javascript" src="js/lasAjaxClient.js"></script>
+    <script type="text/javascript" src="js/queryviz.js"></script>
+    <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="js/ICanHaz.min.js"></script>
+    <script id="qv_code_template" type="text/html">
+    {{! <!--}}<script src="https://las2peer.dbis.rwth-aachen.de/qv-service/js/jquery-1.11.0.min.js"></script>
+<script src="https://las2peer.dbis.rwth-aachen.de/qv-service/js/client.js"></script>
+<script src="https://las2peer.dbis.rwth-aachen.de/qv-service/js/queryviz.js"></script>
+<div id="{{eleId}}"></div>
+<script>QV.fromKey("{{key}}", "{{eleId}}");</script>{{! -->}}
+    </script>
+    <script id="qv_code_template_filters" type="text/html">
+    {{! <!--}}<script src="{{sources}}/js/jquery-1.11.0.min.js"></script>
+<script src="{{sources}}/js/client.js"></script>
+<script src="{{sources}}/js/queryviz.js"></script>
+<div style="display: block;" id="{{filterId}}"></div>
+<div id="{{eleId}}"></div>
+<script>QV.fromKey("{{key}}", "{{eleId}}", "{{filterId}}", "{{host}}", "{{path}}");</script>{{! -->}}
+    </script>
+    <script id="qv_code_template2" type="text/html">
+    {{! <!--}}<html><script type="text/javascript" src="https://las2peer.dbis.rwth-aachen.de/qv-service/js/queryviz.js"></script>
+<script type="text/javascript">
+    QV.fromKey("{{key}}");
+    </script></html>{{! -->}}
+    </script>
+    <!-- Test widget: http://www.gmodules.com/gadgets/ifr?nocache=1&view=default&url=<path-to-widget.xml> -->
+    <script id="qv_widget_template" type="text/html">
+{{! <!--}}<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+    <ModulePrefs
+        title="Query Visualizion Viewer"
+        height={{height}}
+        width={{width}}
+        >
+        <Require feature="opensocial-0.8" />
+    </ModulePrefs>
+    <Content type="html">
+        <![CDATA[
+    <script src="http://dbis.rwth-aachen.de/gadgets/query-visualization/JavaScript/openapp.js"></script>
+    <script src="https://las2peer.dbis.rwth-aachen.de/qv-service/js/jquery-1.11.0.min.js"></script>
+    <script src="https://las2peer.dbis.rwth-aachen.de/qv-service/js/client.js"></script>
+    <script src="https://las2peer.dbis.rwth-aachen.de/qv-service/js/queryviz.js"></script>
+    <script src="https://rawgit.com/Gordin/Logexchange/master/js/Gadgets.js"></script>
+    <div id="viewer"></div>
+    <script src="https://las2peer.dbis.rwth-aachen.de/qv-service/js/qvsviewer.js"></script>
+    <script>var qv = gadget_init("{{key}}", "{{host}}", "{{path}}");</script>
+        ]]>
+    </Content>
+</Module>{{! -->}}
+    </script>
+    <script id="qv_database_key_option_template" type="text/html">
+        {{! <!--}}<option value="{{key}}">{{key}}</option>{{! -->}}
+    </script>
+    <script id="qv_filter_key_option_template" type="text/html">
+        {{! <!--}}<option value="{{key}}|||{{db}}">{{name}} [{{db}}]</option>{{! -->}}
+    </script>
+    <script id="qv_query_key_option_template" type="text/html">
+        {{! <!--}}<option value="{{key}}">{{name}}</option>{{! -->}}
+    </script>
+    <script id="qv_filter_template" type="text/html">
+        {{! <!--}}<div class="{{db}}Filter"><h3><label for="qv_filter_{{key_lc}}">{{name}}:</label></h3>
+        <select id="qv_filter_{{key_lc}}">
+        {{#values}}
+            <option value="{{value}}">{{name}}</option>
+        {{/values}}
+        </select></div>{{! -->}}
+    </script>
+    <script id="qv_query_template" type="text/html">
+        {{! <!--}}<h3><label for="qv_query_{{key_lc}}">{{name}}:</label></h3>
+        <select id="qv_query_{{key_lc}}">
+        {{#values}}
+            <option value="{{.}}">{{.}}</option>
+        {{/values}}
+        </select>{{! -->}}
+    </script>
+        <!-- import jQuery for AJAX calls (must) -->
+<script src="js/jquery-1.11.0.min.js"></script>
+<!-- import Bootstrap for responsive UI (must) -->
+<script src="js/bootstrap.min.js"></script>
+<!-- import JWS and JSRSASIGN (must) -->
+<script src="js/jws-2.0.min.js"></script>
+<script src="js/jsrsasign-4.7.0-all-min.js"></script>
+</head>
+<body>
+<div class="main">
+    <h1>Query Visualizer</h1>
+    <button class="oidc-signin"
+         style="padding:5px; border-radius: 4px; border:1px"
+         data-callback="signinCallback"
+         data-name="Learning Layers"
+         data-logo="logo.png"
+         data-server="https://api.learning-layers.eu/o/oauth2"
+         data-clientid="e000b840-fe19-4ff4-8d3c-16e4581e3103"
+         data-size="sm"
+         data-scope="openid phone email address profile"><img style="margin-right:5px;" src="logo.png" height="16px"> Sign in with <i>Learning Layers</i>
+    
+    </button>
+    <form id="qv_loginform" action="javascript:login_form_submit()">
+    </form>
+    <form id="qv_add_database_form" action="javascript:add_database_form_submit()">
+        <a style="float: right; color: black; font-size: 1.2em;" href="javascript:show_query_form()">back</a>
+        <h2>Add Database:</h2>
+        <label>Database Key: <input id="qv_add_database_database_key" type="text" /></label>
+        <label>Type Code:
+            <select id="qv_add_database_type_code" onchange="suggest_default_port()">
+                <option value="db2">DB2</option>
+                <option value="mysql" selected>MySQL</option>
+                <option value="firebird">Firebird</option>
+                <option value="mssql">MsSQL</option>
+                <option value="postgresql">PostgreSQL</option>
+                <option value="derby">Derby</option>
+                <option value="oracle">Oracle</option>
+            </select>
+        </label>
+        <label>Username: <input id="qv_add_database_username" type="text" /></label>
+        <label>Password: <input id="qv_add_database_password" type="password" /></label>
+        <label>Database: <input id="qv_add_database" type="text" /></label>
+        <label>Host: <input id="qv_add_database_host" type="text" /></label>
+        <label>Port: <input id="qv_add_database_port" type="number" value="3306"/></label>
+        <input type="submit" value="Add Database" />
+    </form>
+    <form id="qv_remove_database_form" action="javascript:remove_database_form_submit()">
+        <h2><label for="qv_remove_database">Remove Database:</label></h2>
+        <select id="qv_remove_database">
+        </select>
+        <input type="submit" value="Remove Database" />
+    </form>
+    <form id="qv_remove_query_form" action="javascript:remove_query_form_submit()">
+        <a style="float: right; color: black; font-size: 1.2em;" href="javascript:show_query_form()">back</a>
+        <h2><label for="qv_remove_query">Remove Queries:</label></h2>
+        <select id="qv_remove_query">
+        </select>
+        <input type="submit" value="Remove Query" />
+    </form>
+    <form id="qv_add_filter_form" action="javascript:add_filter_form_submit()">
+        <a style="float: right; color: black; font-size: 1.2em;" href="javascript:show_query_form()">back</a>
+        <h2>Add Filter</h2>
+        <label>Filter Key: <input id="qv_add_filter_filter_key" type="text" /></label>
+        <label>Database:
+            <select id="qv_add_filter_database">
+            </select>
+        </label>
+        <label>Query:
+            <textarea id="qv_add_filter_query" rows="5" cols=""></textarea>
+        </label>
+        <input type="submit" value="Add Filter" />
+    </form>
+    <form id="qv_remove_filter_form" action="javascript:remove_filter_form_submit()">
+        <h2><label for="qv_remove_filter">Remove Filter:</label></h2>
+        <select id="qv_remove_filter">
+        </select>
+        <input type="submit" value="Remove Filter" />
+    </form>
+    <form id="qv_queryform" action="javascript:visualization_form_submit()">
+        <!-- <a style="float: right; color: black; margin&#45;left: 5px;" href="javascript:logout()">Logout</a> -->
+        <br><br>
+        <a style="float: right; color: black; margin-left: 5px;" href="javascript:show_database_management()">Manage Databases</a>
+        <a style="float: right; color: black; margin-left: 5px;" href="javascript:show_filter_management()">Manage Filters</a>
+        <a style="float: right; color: black; margin-left: 5px;" href="javascript:show_query_management()">Manage Queries</a>
+        <a style="float: right; color: black; margin-left: 5px;" href="javascript:show_help()">Help</a>
+        <h2><label for="qv_database">Database:</label></h2>
+        <select id="qv_database">
+            <option value=""></option>
+        </select>
+        <label>Stored Queries:
+            <select id="qv_select_query">
+              <option value=""></option>
+            </select>
+        </label>
+        <h2>Query Title:<input id="qv_chart_title" type="text" /></h2>
+        <h2><label for="qv_query">Query statement:</label></h2>
+        <!--<textarea id="qv_query" rows="5" cols="">select est_date, count(*) as New_Posts from db2info5.bw_entries where est_date > current_date - 3 months and est_date < current_date group by est_date order by est_date asc</textarea>-->
+        <textarea id="qv_query" rows="5" cols="">SELECT * FROM `employees` WHERE `employeeNumber` > '1500' LIMIT 50</textarea>
+        <h2><a href="javascript:toggle_filter()">+ Filter</a></h2>
+        <div id="qv_filter"></div>
+        <h2><label for="qv_modification_type">Modification Function:</label></h2>
+        <select id="qv_modification_type">
+            <option value="0">Identity</option>
+            <option value="1">Logarithmic</option>
+            <option value="2">Normalization</option>
+        </select>
+        <h2><label for="qv_visualization_type">Visualization Type:</label></h2>
+        <select id="qv_visualization_type">
+            <option value="JSON" selected>JSON</option>
+            <option value="googletable" selected>Google Table</option>
+            <option value="googlepiechart">Google Pie Chart</option>
+            <option value="googlebarchart">Google Bar Chart</option>
+            <option value="googlelinechart">Google Line Chart</option>
+            <option value="googletimelinechart">Google Timeline Chart</option>
+            <!-- <option value="googleradarchart">Google Radar Chart</option> -->
+        </select>
+        <h2><a href="javascript:toggle_metadata()">+ Metadata</a></h2>
+        <div id="qv_metadata">
+            <label><strong>Width:</strong><input id="qv_width" type="number" value="450"/></label>
+            <label><strong>Height:</strong><input id="qv_height" type="number" value="320"/></label>
+            <label><strong>Use Cache:</strong> <input id="qv_cache" type="checkbox"/></label>
+        </div>
+        <!-- <label><strong>Save Query:</strong> <input id="qv_save" type="checkbox"/></label> -->
+        <!-- (Viewing HTML or Widget XML will save automatically) -->
+        <!-- <input style="margin: 5% auto; font&#45;size: 1.5em;" type="submit" value="Visualize!"/> -->
+        <button style="margin: 5% auto; font-size: 1.5em;" type="submit">Visualize!</button>
+        <button style="margin: 5% auto; font-size: 1.5em;" id="qv_save_button" type="button" disabled>Save Query</button>
+        <button style="margin: 5% auto; font-size: 1.5em;float: right;" id="qv_save_filter" type="button" disabled>Convert to Filter</button>
+    </form>
+    <div id="qv_chart">
+        <ul class="tabs" id="tabset1">
+            <li><a href="javascript:load_preview()">Visualization</a></li>
+            <li><a href="javascript:load_export_html()">Export Data</a></li>
+        </ul>
+        <div class="tabpane tabs1">
+            <ul class="tabs" id="tabset2">
+                <li><a href="javascript:load_preview()">Preview</a></li>
+                <li><a href="javascript:load_html()">HTML</a></li>
+                <li><a href="javascript:load_widget_xml()">Widget XML</a></li>
+            </ul>
+            <div class="tabpane tabs2">
+                <div id="qv_preview"></div>
+            </div>
+            <div class="tabpane tabs2">
+                <div id="qv_generated_html_wrapper">
+                    <textarea id="qv_generated_html" rows="5" cols="200" style="white-space: nowrap;" readonly="readonly"></textarea>
+                    <a download="result.html"  id='qv_save_html_link'><button>Save</button></a>
+                </div>
+            </div>
+            <div class="tabpane tabs2">
+                <div id="qv_generated_widget_wrapper">
+                    <textarea id="qv_generated_widget" rows="15" cols="200" style="white-space: nowrap;" readonly="readonly"></textarea>
+                    <a download="widget.xml"  id='qv_save_widget_link'><button>Save</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="tabpane tabs1">
+            <ul class="tabs" id="tabset3">
+                <li><a href="javascript:load_export_html()">HTML</a></li>
+                <li><a href="javascript:load_export_csv()">CSV</a></li>
+                <li><a href="javascript:load_export_xml()">XML</a></li>
+                <li><a href="javascript:load_export_json()">JSON</a></li>
+                <li><a href="javascript:load_export_url()">URL</a></li>
+            </ul>
+            <div class="tabpane tabs3">
+                <div id="qv_export_html_wrapper">
+                    <textarea id="qv_export_html" rows="20" cols="200" style="white-space: nowrap;" readonly="readonly"></textarea>
+                    <a download="data.html"  id='qv_save_export_html_link'><button>Save</button></a>
+                </div>
+            </div>
+            <div class="tabpane tabs3">
+                <div id="qv_export_csv_wrapper">
+                    <textarea id="qv_export_csv" rows="20" cols="200" style="white-space: nowrap;" readonly="readonly"></textarea>
+                    <a download="data.csv"  id='qv_save_export_csv_link'><button>Save</button></a>
+                </div>
+            </div>
+            <div class="tabpane tabs3">
+                <div id="qv_export_xml_wrapper">
+                    <textarea id="qv_export_xml" rows="20" cols="200" style="white-space: nowrap;" readonly="readonly"></textarea>
+                    <a download="data.xml"  id='qv_save_export_xml_link'><button>Save</button></a>
+                </div>
+            </div>
+            <div class="tabpane tabs3">
+                <div id="qv_export_json_wrapper">
+                    <textarea id="qv_export_json" rows="20" cols="200" style="white-space: nowrap;" readonly="readonly"></textarea>
+                    <a download="data.json"  id='qv_save_export_json_link'><button>Save</button></a>
+                </div>
+            </div>
+            <div class="tabpane tabs3">
+                <div id="qv_export_url_wrapper">
+                    <textarea id="qv_export_url" rows="2" cols="200" style="white-space: nowrap;" readonly="readonly"></textarea>
+                    <a href="" id='qv_save_export_url_link' target="_blank"><button>Open</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- import client library for service -->
+<script type="text/javascript" src="js/client.js"></script>
+<script type="text/javascript" src="js/demo.js"></script>
+    <!-- Place this asynchronous JavaScript just before your </body> tag -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script');
+    po.type = 'text/javascript';
+    po.async = true;
+    po.src = './js/oidc-button.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(po, s);
+  })();
+</script>
+</body>
+</html>

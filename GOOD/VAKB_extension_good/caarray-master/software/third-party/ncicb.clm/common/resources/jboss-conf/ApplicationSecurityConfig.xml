@@ -1,0 +1,37 @@
+<security-config>
+	<upt-context-name>
+		<!-- Context Name for the UPT Application -->
+		@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0968797965606a687d606667276a66677d6c717d276768646c49">[email protected]</a>
+	</upt-context-name>
+	<application-list>
+	<!-- For every application using the security api an entry should be made here -->
+		<application>
+			<context-name>
+				@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1b7a6b6b7772787a6f727475357874756f7e636f35757a767e5b">[email protected]</a>
+			</context-name>
+			<authentication>
+				<lockout-time>
+					@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7814171b13170d0c560c11151d5615111414110b1d1b17161c0b38">[email protected]</a>				
+				</lockout-time>
+				<allowed-login-time>
+					@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6905060a02061c1d471d00040c4704000505001a0c0a06070d1a29">[email protected]</a>				
+				</allowed-login-time>
+				<allowed-attempts>
+					@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9df3f2b3f2fbb3fcf1f1f2eaf8f9b3fce9e9f8f0ede9eedd">[email protected]</a>				
+				</allowed-attempts>
+				<authentication-provider-class>
+				<!-- Fully qualified class name-->
+				</authentication-provider-class>
+			</authentication>
+			<authorization>
+				<authorization-provider-class>
+					<!-- Fully qualified class name-->
+				</authorization-provider-class>
+				<hibernate-config-file>
+					<!-- Fully qualified file path -->
+					@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cfa7a6adaabda1aebbaae1aca9a8e1a9a6a3aae1bfaebba78f">[email protected]</a>
+				</hibernate-config-file>
+			</authorization>
+		</application>
+	</application-list>
+</security-config>

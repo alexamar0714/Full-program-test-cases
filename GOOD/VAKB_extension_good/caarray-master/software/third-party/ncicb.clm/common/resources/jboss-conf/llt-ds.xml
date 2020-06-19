@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ===================================================================== -->
+<!--                                                                       -->
+<!--  JBoss Server Configuration                                           -->
+<!--                                                                       -->
+<!-- ===================================================================== -->
+
+<!-- $Id$ -->
+<!-- ==================================================================== -->
+<!--  Datasource config for MySQL using 2.0.11 driver                     -->
+<!-- ==================================================================== -->
+
+
+<datasources>
+  <local-tx-datasource>
+    <jndi-name>@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b6d7c6c6dadfd5d7c2dfd9d898d2c598d8d7dbd3f6">[email protected]</a></jndi-name>
+    <connection-url>@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4f2b2e3b2e2d2e3c2a613a3d230f">[email protected]</a></connection-url>
+    <user-name>@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="472326332625263422693234223507">[email protected]</a></user-name>
+    <password>@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6105001500030012044f11001212160e130521">[email protected]</a></password>
+    <driver-class>@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4622273227242735236822342f30233406">[email protected]</a></driver-class>
+  </local-tx-datasource>
+    <local-tx-datasource>
+    <jndi-name>@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a7c6d7d7cbcec4c6d3cec8c989c3d49589c9c6cac2e7">[email protected]</a></jndi-name>
+    <connection-url>@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c2a6a3b6a3a0a3b1a7ecb7b0ae82">[email protected]</a></connection-url>
+    <user-name>@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7c181d081d1e1d0f1952090f190e3c">[email protected]</a></user-name>
+    <password>@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6d090c190c0f0c1e08431d0c1e1e1a021f092d">[email protected]</a></password>
+    <driver-class>@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0266637663606371672c66706b74677042">[email protected]</a></driver-class>
+  </local-tx-datasource>
+
+</datasources>

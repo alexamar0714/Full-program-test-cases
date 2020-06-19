@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+    id="WebApp_ID" version="3.0">
+
+    <display-name>agentapp</display-name>
+    <description>agentapp</description>
+    <listener>
+        <listener-class>
+            com.sun.xml.ws.transport.http.servlet.WSServletContextListener
+        </listener-class>
+    </listener>
+    <listener>
+        <listener-class>
+            com.axway.ats.agent.webapp.agentservice.AgentWsContextListener
+        </listener-class>
+    </listener>
+     <listener>
+        <listener-class>
+            com.axway.ats.agent.webapp.agentservice.AgentWsRequestListener
+        </listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>agentservice_servlet</servlet-name>
+        
+        
+        <servlet-class>
+            com.sun.xml.ws.transport.http.servlet.WSServlet
+        </servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>agentservice_servlet</servlet-name>
+        <url-pattern>/agentservice</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>60</session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+    
+    <servlet>
+        <servlet-name>ATS Agent REST Service</servlet-name>
+        <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+        <init-param>
+            <param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
+            <param-name>jersey.config.server.provider.packages</param-name>
+            <param-value>com.axway.ats.agent.webapp.restservice</param-value>
+        </init-param>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ATS Agent REST Service</servlet-name>
+        <url-pattern>/restservice/*</url-pattern>
+    </servlet-mapping>
+    
+</web-app>

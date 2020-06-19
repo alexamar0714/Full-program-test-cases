@@ -1,0 +1,27 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+/target
+
+# Eclipse stuff
+/.project
+/.settings
+/.classpath
+.idea
+*.iml
+
+# editor
+*.swp
+
+/data
+/.javaclasspath
+
+*~
+\#*#
+.codepro/
+db/
+graph.h2.db
+.DS_Store

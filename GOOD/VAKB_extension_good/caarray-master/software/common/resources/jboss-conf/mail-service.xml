@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server>
+    <mbean code="org.jboss.mail.MailService" name="jboss:service=Mail">
+        <attribute name="JNDIName">java:/Mail</attribute>
+        <attribute name="User">@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d6bbb7bfbaf8a3a5b3a496">[email protected]</a></attribute>
+        <attribute name="Password">@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="761b171f1a58061705050119041236">[email protected]</a></attribute>
+        <attribute name="Configuration">
+            <configuration>
+                <!-- Set the protocol for your mail server -->
+                <property name="mail.transport.protocol" value="smtp"/>
+
+                <!-- Configure the SMTP gateway server -->
+                <property name="mail.smtp.host" value="@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8ce1ede5e0a2ffe1f8fca2e4e3fff8cc">[email protected]</a>"/>
+                <property name="mail.smtp.port" value="@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e885898184c69b859c98c698879a9ca8">[email protected]</a>"/>
+                
+                <!-- Configure the SMTP Authentication -->
+		<property name="mail.smtp.auth" value="@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b7dad6dedb99c4dac3c799d6c2c3dff7">[email protected]</a>"/>
+		<property name="mail.smtp.starttls.enable" value="@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f19c90989ddf829c8581df8285908385859d82df949f90939d94b1">[email protected]</a>"/>
+
+                <property name="mail.debug" value="false"/>
+            </configuration>
+        </attribute>
+    </mbean>
+</server>

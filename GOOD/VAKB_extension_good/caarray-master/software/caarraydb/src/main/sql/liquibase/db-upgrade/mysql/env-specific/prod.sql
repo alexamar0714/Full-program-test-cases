@@ -1,0 +1,3 @@
+update config_parameter set raw_value = '<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9cd2dfd5dfdedcecf3ecb2f2fff5b2f2f5f4b2fbf3ea">[email protected]</a>' where param = 'REG_EMAIL_TO';
+update config_parameter set raw_value = '<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3b75787278797b4b544b1555585215555253155c544d">[email protected]</a>' where param = 'EMAIL_FROM';
+update config_parameter set raw_value = '/local/content/caarray' where param = 'STRUTS_MULTIPART_SAVEDIR';

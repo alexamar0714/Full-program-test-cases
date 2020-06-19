@@ -1,0 +1,7 @@
+DROP DATABASE IF EXISTS @<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="88ece9fce9eae9fbeda6e6e9e5edc8">[email protected]</a>;
+CREATE DATABASE @<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7014110411121103155e1e111d1530">[email protected]</a> DEFAULT CHARACTER SET latin1;
+
+DELETE FROM mysql.user WHERE User='@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4327223722212230266d3630263103">[email protected]</a>';
+
+GRANT ALL ON @<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a3c7c2d7c2c1c2d0c68dcdc2cec6e38d">[email protected]</a>* TO '@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="84e0e5f0e5e6e5f7e1aaf1f7e1f6c4">[email protected]</a>'@'localhost' IDENTIFIED BY '@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="395d584d585b584a5c1749584a4a4e564b5d79">[email protected]</a>' WITH GRANT OPTION;
+GRANT ALL ON @<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0e6a6f7a6f6c6f7d6b20606f636b4e20">[email protected]</a>* TO '@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f99d988d989b988a9cd78c8a9c8bb9">[email protected]</a>'@'%' IDENTIFIED BY '@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c7a3a6b3a6a5a6b4a2e9b7a6b4b4b0a8b5a387">[email protected]</a>' WITH GRANT OPTION;

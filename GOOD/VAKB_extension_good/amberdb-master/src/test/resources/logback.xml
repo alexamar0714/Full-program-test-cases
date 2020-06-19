@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns="logback"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="logback https://raw.github.com/enricopulatzo/logback-XSD/master/src/main/xsd/logback.xsd">
+  <appender name="STDERR" class="ch.qos.logback.core.ConsoleAppender">
+    <target>System.err</target>
+    <encoder>
+      <pattern>
+        %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+      </pattern>
+    </encoder>
+  </appender>
+
+  <logger name="com.github.flyway.core.command.DbMigrate" level="OFF" />
+
+  <root level="OFF">
+    <appender-ref ref="STDERR" />
+  </root>
+</configuration>
+
+
+

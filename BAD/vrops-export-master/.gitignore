@@ -1,0 +1,10 @@
+/target/
+/target/
+/.DS_Store
+/.classpath
+/.project
+/.idea
+/.settings
+/vrops.csv
+/dependency-reduced-pom.xml
+/nohup.out

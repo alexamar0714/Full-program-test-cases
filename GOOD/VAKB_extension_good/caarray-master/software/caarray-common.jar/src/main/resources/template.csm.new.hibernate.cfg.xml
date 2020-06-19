@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- @<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="abefeaffeaf8e4fef9e8eef4e8e4e5ede2ecf4f8ffeaf9ffeb">[email protected]</a>
+        <property name="hibernate.connection.datasource">java:jdbc/CaArrayDataSource</property>
+        <property name="current_session_context_class">jta</property>
+        <property name="hibernate.transaction.factory_class">org.hibernate.transaction.CMTTransactionFactory</property>
+        <property name="hibernate.transaction.manager_lookup_class">org.hibernate.transaction.JBossTransactionManagerLookup</property>
+        <property name="hibernate.dialect">gov.nih.nci.caarray.util.CaarrayInnoDBDialect</property>
+        @<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6420253025372b313627213b272b2a222d233b212a2024">[email protected]</a> -->
+
+        <!-- @<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="95dddcd7d0c7dbd4c1d0cad6dadbd3dcd2cac6c1d4c7c1d5">[email protected]</a>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="287b6d7a7e6d7a6669656d68">[email protected]</a>:@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8adac5d8deca">[email protected]</a>/@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d397919d929e9693">[email protected]</a></property>
+        <property name="hibernate.connection.username">@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="99dddbcccadccbd9">[email protected]</a></property>
+        <property name="hibernate.connection.password">@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d6929486978585819296">[email protected]</a></property>
+        <property name="hibernate.dialect">gov.nih.nci.caarray.util.CaarrayInnoDBDialect</property>
+        @<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="440c0d0601160a0510011b070b0a020d031b010a0004">[email protected]</a> -->
+
+        <!-- mapping files -->
+        <mapping resource="gov/nih/nci/security/authorization/domainobjects/Application.hbm.xml"/>
+        <mapping resource="gov/nih/nci/security/authorization/domainobjects/Group.hbm.xml"/>
+        <mapping resource="gov/nih/nci/security/authorization/domainobjects/Privilege.hbm.xml"/>
+        <mapping resource="gov/nih/nci/security/authorization/domainobjects/ProtectionElement.hbm.xml"/>
+        <mapping resource="gov/nih/nci/security/authorization/domainobjects/ProtectionGroup.hbm.xml"/>
+        <mapping resource="gov/nih/nci/security/authorization/domainobjects/Role.hbm.xml"/>
+        <mapping resource="gov/nih/nci/security/authorization/domainobjects/User.hbm.xml"/>
+        <mapping resource="gov/nih/nci/security/authorization/domainobjects/UserGroupRoleProtectionGroup.hbm.xml"/>
+        <mapping resource="gov/nih/nci/security/authorization/domainobjects/UserProtectionElement.hbm.xml"/>
+        <mapping resource="gov/nih/nci/security/authorization/domainobjects/FilterClause.hbm.xml"/>        
+        <mapping resource="gov/nih/nci/security/dao/hibernate/UserGroup.hbm.xml"/>       
+        <mapping resource="gov/nih/nci/security/authorization/domainobjects/InstanceLevelMappingElement.hbm.xml"/>         
+    </session-factory>
+</hibernate-configuration>

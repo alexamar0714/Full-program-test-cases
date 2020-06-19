@@ -1,0 +1,5 @@
+update config_parameter set raw_value = 'true' where param = 'SEND_CONFIRM_EMAIL';
+update config_parameter set raw_value = 'true' where param = 'SEND_ADMIN_EMAIL';
+update config_parameter set raw_value = 'false' where param = 'DEVELOPMENT_MODE';
+update config_parameter set raw_value = '@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b6c3c5d3c498d7d2dbdfd898d3dbd7dfda98d7d2d2c4d3c5c598c2d9f6">[email protected]</a>' where param = 'REG_EMAIL_TO' and '@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b1c4c2d4c39fd0d5dcd8df9fd4dcd0d8dd9fd0d5d5c3d4c2c29fc5def1">[email protected]</a>' not like '@%@';
+update config_parameter set raw_value = '@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="14616771663a7570797d7a3a7179757d783a757070667167673a72667b7954">[email protected]</a>' where param = 'EMAIL_FROM' and '@<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="22575147500c43464f4b4c0c474f434b4e0c434646504751510c44504d4f62">[email protected]</a>' not like '@%@';

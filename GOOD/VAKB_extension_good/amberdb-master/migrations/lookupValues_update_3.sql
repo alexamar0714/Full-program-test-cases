@@ -1,0 +1,3 @@
+INSERT INTO lookups (name, code, value, deleted) VALUES('constraint', 'edeposit online access coming soon', 'edeposit online access coming soon' , 'N');
+INSERT INTO lookups (name, code, value, deleted) VALUES('constraint', 'edeposit online access after embargo', 'edeposit online access after embargo' , 'N');
+INSERT INTO lookups (name, code, value, deleted) VALUES('constraint', 'edeposit library access coming soon', 'edeposit library access coming soon' , 'N');

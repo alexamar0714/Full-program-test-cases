@@ -1,0 +1,99 @@
+/* Addresses.java
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * Copyright Ⓒ 2014-2015 Universiteit Gent
+ * 
+ * This file is part of the Degage Web Application
+ * 
+ * Corresponding author (see also AUTHORS.txt)
+ * 
+ * Kris Coolsaet
+ * Department of Applied Mathematics, Computer Science and Statistics
+ * Ghent University 
+ * Krijgslaan 281-S9
+ * B-9000 GENT Belgium
+ * 
+ * The Degage Web Application is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * The Degage Web Application is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Affero General Public License
+ * along with the Degage Web Application (file LICENSE.txt in the
+ * distribution).  If not, see http://www.gnu.org/licenses/.
+ */
+
+package controllers.util;
+
+import be.ugent.degage.db.dao.AddressDAO;
+import be.ugent.degage.db.models.Address;
+import controllers.Utils;
+
+import java.util.*;
+
+/**
+ */
+public class Addresses  {
+
+    public static class EditAddressModel {
+
+        public String city;
+        public String num;
+        public String street;
+        public String zipCode;
+        public String country;
+        public float lat;
+        public float lng;
+
+        public void populate(Address address) {
+            if (address == null) {
+                country = DEFAULT_COUNTRY_NAME;
+                return;
+            }
+
+            city = address.getCity();
+            num = address.getNum();
+            street = address.getStreet();
+            zipCode = address.getZip();
+            country = address.getCountry();
+            lat = address.getLat();
+            lng = address.getLng();
+        }
+
+        public Address toAddress() {
+            return new Address(country, zipCode, city, street, num, lat, lng);
+        }
+    }
+
+    /**
+     * List of all country names. In Dutch.
+     */
+    public static Iterable<String> COUNTRY_NAMES;
+
+    public static String DEFAULT_COUNTRY_NAME = Utils.DEFAULT_LOCALE.getDisplayCountry(Utils.DEFAULT_LOCALE);
+
+    static {
+        Set<String> countries = new TreeSet<>(); // remove duplicates and sort
+        Locale[] locales = Locale.getAvailableLocales();
+        for (Locale locale : locales) {
+            String name = locale.getDisplayCountry(Utils.DEFAULT_LOCALE);
+            if (name != null && !name.isEmpty()) {
+                countries.add(name);
+            }
+        }
+        COUNTRY_NAMES = new ArrayList<> (countries);
+    }
+
+    /**
+     * Updates an address in the database
+     */
+    public static void updateAddress(EditAddressModel model, int addressId, AddressDAO dao) {
+        dao.updateAddress(
+                new Address(addressId, model.country, model.zipCode, model.city, model.street, model.num, model.lat, model.lng)
+        );
+    }
+}

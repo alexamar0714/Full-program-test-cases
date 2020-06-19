@@ -1,0 +1,174 @@
+<!--
+~   Copyright © 2013, Groupon, Inc
+~   All rights reserved.
+~
+~   Redistribution and use in source and binary forms, with or without
+~   modification, are permitted provided that the following conditions are met:
+~       * Redistributions of source code must retain the above copyright
+~         notice, this list of conditions and the following disclaimer.
+~       * Redistributions in binary form must reproduce the above copyright
+~         notice, this list of conditions and the following disclaimer in the
+~         documentation and/or other materials provided with the distribution.
+~       * Neither the name of the <organization> nor the
+~         names of its contributors may be used to endorse or promote products
+~         derived from this software without specific prior written permission.
+~
+~   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+~   ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+~   WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+~   DISCLAIMED. IN NO EVENT SHALL <COPYRIGHT HOLDER> BE LIABLE FOR ANY
+~   DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+~   (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+~   LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+~   ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+~   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+~   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>mysql-embed</artifactId>
+    <packaging>jar</packaging>
+    <name>mysql-embed</name>
+    <!--<version>0.0.2-SNAPSHOT</version>-->
+    <description>
+        Convenience library for using embedded MySQL in Junt4 tests.
+    </description>
+    <url>https://github.com/groupon/mysql-junit4/</url>
+    <organization>
+        <name>Groupon, Inc.</name>
+    </organization>
+    <parent>
+      <groupId>com.groupon.mysql</groupId>
+      <artifactId>mysql-testing</artifactId>
+      <version>0.3-SNAPSHOT</version>
+      <!-- <relativePath>../pom.xml</relativePath>-->
+    </parent>
+    <inceptionYear>2013</inceptionYear>
+
+    <licenses>
+        <license>
+            <name>BSD 3-Clause</name>
+            <url>https://github.com/groupon/mysql-junit4/tree/master/LICENSE</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>brianm</id>
+            <name>Brian McCallister</name>
+            <email><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8defffe4ece3e0cdeaffe2f8fde2e3a3eee2e0">[email protected]</a></email>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f5929c81b5929c819d8097db969a98">[email protected]</a>:groupon/mysql-junit4.git</connection>
+        <developerConnection>scm:git:<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6f08061b2f08061b071a0d410c0002">[email protected]</a>:groupon/mysql-junit4.git</developerConnection>
+        <url>https://github.com/groupon/mysql-junit4/tree/master</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <properties>
+        <project.build.targetJdk>1.7</project.build.targetJdk>
+        <basepom.check.fail-dependency>false</basepom.check.fail-dependency>
+        <basepom.check.fail-findbugs>false</basepom.check.fail-findbugs>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>15.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.26</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-mxj</artifactId>
+            <version>5.0.12</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-mxj-db-files</artifactId>
+            <version>5.0.12</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>1.4.0</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.0</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>jarjar-maven-plugin</artifactId>
+                <version>1.8</version>
+                <configuration>
+                    <includes>
+                        <include>com.groupon.mysql:mysql-junit4</include>
+                        <include>com.google.guava:guava</include>
+                    </includes>
+                    <rules>
+                        <keep>
+                            <pattern>com.groupon.mysql.*</pattern>
+                        </keep>
+                        <rule>
+                            <pattern>com.google.**.*</pattern>
+                            <result><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1675797b3871647963667978387b6f65677a3875797b38717979717a7338562738">[email protected]</a><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a480e496">[email protected]</a></result>
+                        </rule>
+                    </rules>
+                </configuration>
+                <!-- JarJar all classes before running tests -->
+                <executions>
+                    <execution>
+                        <id>jarjar-classes</id>
+                        <phase>process-test-classes</phase>
+                        <goals>
+                            <goal>jarjar</goal>
+                        </goals>
+                        <configuration>
+                            <input>{classes}</input>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>jarjar-test-classes</id>
+                        <phase>process-test-classes</phase>
+                        <goals>
+                            <goal>jarjar</goal>
+                        </goals>
+                        <configuration>
+                            <input>{test-classes}</input>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
