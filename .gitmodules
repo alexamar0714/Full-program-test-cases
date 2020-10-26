@@ -1,0 +1,9 @@
+[submodule "Huge project test cases/jdk"]
+	path = Huge project test cases/jdk
+	url = git://github.com/openjdk/jdk.git
+[submodule "Huge project test cases/netbeans"]
+	path = Huge project test cases/netbeans
+	url = git://github.com/apache/netbeans.git
+[submodule "Huge project test cases/liferay-portal"]
+	path = Huge project test cases/liferay-portal
+	url = git://github.com/liferay/liferay-portal.git
