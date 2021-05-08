@@ -36,7 +36,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
     <surefire-plugin.version>2.4.3</surefire-plugin.version>
     <versions-maven-plugin.version>2.1</versions-maven-plugin.version>
     <web.port>9986</web.port>
-    <jackson2.version>2.4.0</jackson2.version>
+    <jackson2.version>2.7.9.6</jackson2.version>
   </properties>
   <build>
     <plugins>
