@@ -31,7 +31,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
     <spring.release>4.1.0.RELEASE</spring.release>
     <spring.security.release>3.2.5.RELEASE</spring.security.release>
     <spring.security.oauth2.release>2.0.3.RELEASE</spring.security.oauth2.release>
-    <spring.integration.version>4.0.4.RELEASE</spring.integration.version>
+    <spring.integration.version>4.3.16.RELEASE</spring.integration.version>
     <stop.port>9996</stop.port>
     <surefire-plugin.version>2.4.3</surefire-plugin.version>
     <versions-maven-plugin.version>2.1</versions-maven-plugin.version>
