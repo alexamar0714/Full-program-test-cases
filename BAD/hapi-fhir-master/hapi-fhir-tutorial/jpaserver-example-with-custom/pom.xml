@@ -23,7 +23,7 @@
 		<dependency>
 			<groupId>ca.uhn.hapi.fhir</groupId>
 			<artifactId>hapi-fhir-base</artifactId>
-			<version>1.0-SNAPSHOT</version>
+			<version>5.4.0</version>
 		</dependency>
 
 		<!-- At least one "structures" JAR must also be included -->
