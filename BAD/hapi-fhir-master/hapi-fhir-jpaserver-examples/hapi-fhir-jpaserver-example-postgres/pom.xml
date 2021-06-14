@@ -26,7 +26,7 @@
 		<dependency>
 			<groupId>ca.uhn.hapi.fhir</groupId>
 			<artifactId>hapi-fhir-base</artifactId>
-			<version>2.1-SNAPSHOT</version>
+			<version>5.4.0</version>
 		</dependency>
 
 		<!-- This dependency includes the JPA server itself, which is packaged separately from the rest of HAPI FHIR -->
