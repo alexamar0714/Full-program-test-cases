@@ -24,12 +24,12 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
     <jstl-jstl.version>1.2.1</jstl-jstl.version>
     <junit.version>4.11</junit.version>
     <log4j.version>1.2.17</log4j.version>
-    <mysql.version>5.1.32</mysql.version>
+    <mysql.version>8.0.16</mysql.version>
     <rome.version>1.5.0</rome.version>
     <servlet-api.version>3.1.0</servlet-api.version>
     <slf4j.version>1.7.7</slf4j.version>
-    <spring.release>4.1.0.RELEASE</spring.release>
-    <spring.security.release>3.2.5.RELEASE</spring.security.release>
+    <spring.release>5.2.15.RELEASE</spring.release>
+    <spring.security.release>5.2.9.RELEASE</spring.security.release>
     <spring.security.oauth2.release>2.0.3.RELEASE</spring.security.oauth2.release>
     <spring.integration.version>4.0.4.RELEASE</spring.integration.version>
     <stop.port>9996</stop.port>
