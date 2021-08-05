@@ -30,7 +30,7 @@
         <dbunit.version>2.5.3</dbunit.version>
         <mockito.verison>1.10.19</mockito.verison>
         <powermock.version>1.6.6</powermock.version>
-        <dbcp2.version>2.1.1</dbcp2.version>
+        <dbcp2.version>2.9.0</dbcp2.version>
         <commonslang.version>2.6</commonslang.version>
         <commonslang3.version>3.5</commonslang3.version>
         <commons-codec>1.9</commons-codec>
