@@ -20,7 +20,7 @@
         <functional-java.version>4.5</functional-java.version>
         <rx-jdbc.version>0.7</rx-jdbc.version>
         <c3p0.version>0.9.5</c3p0.version>
-        <dbcp.version>2.1.1</dbcp.version>
+        <dbcp.version>2.9.0</dbcp.version>
         <hikari.version>2.4.3</hikari.version>
         <spring-jdbc.version>4.2.2.RELEASE</spring-jdbc.version>
         <guava.version>18.0</guava.version>
