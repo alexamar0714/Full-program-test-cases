@@ -14,7 +14,7 @@
     <url>https://github.com/Axway/ats-framework</url>
 
     <properties>
-        <selenium-java.version>3.8.1</selenium-java.version>
+        <selenium-java.version>4.0.0</selenium-java.version>
         <selelnium-htmlunit-driver.version>2.26</selelnium-htmlunit-driver.version>
         <selenium-supported.browser.versions>Firefox 57, IE 11, Safari 5.1+, Chrome 63, Edge(limited) </selenium-supported.browser.versions>
 
@@ -86,7 +86,7 @@
                                         </goals>
                                     </pluginExecutionFilter>
                                     <action>
-                                        <ignore />
+                                        <ignore/>
                                     </action>
                                 </pluginExecution>
                             </pluginExecutions>
