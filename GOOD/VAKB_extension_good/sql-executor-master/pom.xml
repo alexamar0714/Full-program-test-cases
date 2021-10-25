@@ -12,7 +12,7 @@
   <properties>
     <java.version>1.8</java.version>
 
-    <mysql.version>5.1.43</mysql.version>
+    <mysql.version>8.0.27</mysql.version>
     <mybatis.version>3.4.2</mybatis.version>
     <jcommander.version>1.60</jcommander.version>
     <lombok.version>1.16.4</lombok.version>
