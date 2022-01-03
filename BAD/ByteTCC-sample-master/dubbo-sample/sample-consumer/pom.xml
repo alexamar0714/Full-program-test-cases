@@ -9,7 +9,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.version>4.3.7.RELEASE</spring.version>
+		<spring.version>5.2.18.RELEASE</spring.version>
 	</properties>
 
 	<dependencies>
@@ -61,7 +61,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-beans</artifactId>
-			<version>4.3.7.RELEASE</version>
+			<version>5.2.18.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -71,12 +71,12 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
-			<version>4.3.7.RELEASE</version>
+			<version>5.2.18.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-tx</artifactId>
-			<version>4.3.7.RELEASE</version>
+			<version>5.2.18.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -86,17 +86,17 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aop</artifactId>
-			<version>4.3.7.RELEASE</version>
+			<version>5.2.18.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-			<version>4.3.7.RELEASE</version>
+			<version>5.2.18.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-expression</artifactId>
-			<version>4.3.7.RELEASE</version>
+			<version>5.2.18.RELEASE</version>
 		</dependency>
 
 		<dependency>
