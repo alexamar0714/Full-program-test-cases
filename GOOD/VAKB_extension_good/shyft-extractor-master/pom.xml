@@ -18,7 +18,7 @@
         <typesafe-config.version>1.3.0</typesafe-config.version>
         <redission.version>2.2.8</redission.version>
         <functional-java.version>4.5</functional-java.version>
-        <rx-jdbc.version>0.7</rx-jdbc.version>
+        <rx-jdbc.version>0.7.18</rx-jdbc.version>
         <c3p0.version>0.9.5</c3p0.version>
         <dbcp.version>2.1.1</dbcp.version>
         <hikari.version>2.4.3</hikari.version>
