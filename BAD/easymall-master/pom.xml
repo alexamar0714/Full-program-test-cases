@@ -34,7 +34,7 @@
         <commonslang.version>2.6</commonslang.version>
         <commonslang3.version>3.5</commonslang3.version>
         <commons-codec>1.9</commons-codec>
-        <shiro.version>1.3.2</shiro.version>
+        <shiro.version>1.7.1</shiro.version>
         <servlet.version>3.1.0</servlet.version>
         <!-- plugin version -->
         <maven-compiler-plugin.version>3.6.1</maven-compiler-plugin.version>
