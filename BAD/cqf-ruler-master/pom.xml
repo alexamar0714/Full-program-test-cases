@@ -175,7 +175,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
-            <version>4.3.10.RELEASE</version>
+            <version>5.0.0.RELEASE</version>
         </dependency>
 
         <dependency>
@@ -187,13 +187,13 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>4.3.10.RELEASE</version>
+            <version>5.2.21.RELEASE</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
-            <version>4.3.10.RELEASE</version>
+            <version>5.2.21.RELEASE</version>
         </dependency>
 
         <dependency>
@@ -211,7 +211,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-messaging</artifactId>
-            <version>4.3.10.RELEASE</version>
+            <version>5.0.0.RELEASE</version>
         </dependency>
 
         <dependency>
@@ -229,13 +229,13 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>4.3.10.RELEASE</version>
+            <version>5.2.21.RELEASE</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-websocket</artifactId>
-            <version>4.3.10.RELEASE</version>
+            <version>5.2.21.RELEASE</version>
         </dependency>
 
 
