@@ -989,7 +989,7 @@
 			<dependency>
 				<groupId>org.springframework.data</groupId>
 				<artifactId>spring-data-jpa</artifactId>
-				<version>1.11.6.RELEASE</version>
+				<version>2.5.11</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
@@ -1341,7 +1341,7 @@
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<ignore></ignore>
+										<ignore/>
 									</action>
 								</pluginExecution>
 								<pluginExecution>
@@ -1360,7 +1360,7 @@
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<ignore></ignore>
+										<ignore/>
 									</action>
 								</pluginExecution>
 								<!-- 
@@ -1603,7 +1603,7 @@
 								</replace>
 								<echo>Adding Syntax Highlighter</echo>
 								<replace dir="target/site" summary="true">
-									<include name="*.html"></include>
+									<include name="*.html"/>
 									<replacetoken><![CDATA[</body>]]></replacetoken>
 									<replacevalue><![CDATA[
 <script type="text/javascript">
@@ -1643,9 +1643,9 @@
 						<phase>site</phase>
 						<configuration>
 							<target>
-								<echo>Adding Google analytics in target/site for &lt;body&gt;</echo>
+								<echo>Adding Google analytics in target/site for &lt;body></echo>
 								<replace dir="target/site" summary="true">
-									<include name="**/*.html"></include>
+									<include name="**/*.html"/>
 									<replacefilter token="#build#" value="${label}"/>
 									<replacefilter token="#version#" value="${project.version}"/>
 									<replacetoken><![CDATA[</body>]]></replacetoken>
@@ -1665,9 +1665,9 @@
                 </body >
                 ]]></replacevalue>
 								</replace>
-								<echo>Adding Google analytics in target/site for &lt;BODY&gt;</echo>
+								<echo>Adding Google analytics in target/site for &lt;BODY></echo>
 								<replace dir="target/site" summary="true">
-									<include name="**/*.html"></include>
+									<include name="**/*.html"/>
 									<replacetoken><![CDATA[</BODY>]]></replacetoken>
 									<replacevalue><![CDATA[
 <script>
