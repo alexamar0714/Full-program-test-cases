@@ -96,7 +96,7 @@
 
         <!-- Plese don't upgrade from 3.2.x; it leads to test problems. -->
         <!--<spring.version>4.2.6.RELEASE</spring.version>-->
-        <spring.version>3.2.15.RELEASE</spring.version>
+        <spring.version>5.2.22.RELEASE</spring.version>
 
         <!-- The ${argLine} is important to have here, as we otherwise cannot
              pass the JaCoCo Agent settings through SureFire. -->
