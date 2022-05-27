@@ -25,7 +25,7 @@
 		<spring-boot.version>1.4.3.RELEASE</spring-boot.version>
 		<lombok.version>1.16.10</lombok.version>
 		<winsw.version>2.0.1</winsw.version>
-		<bouncycastle.version>1.52</bouncycastle.version>
+		<bouncycastle.version>1.69</bouncycastle.version>
 		<pkg.name>iot-gateway</pkg.name>
 	</properties>
 
