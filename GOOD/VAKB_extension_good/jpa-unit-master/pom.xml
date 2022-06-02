@@ -43,7 +43,7 @@
     <version.commons-lang3>3.6</version.commons-lang3>
     <version.guava>23.0</version.guava>
     <version.flywaydb>4.2.0</version.flywaydb>
-    <version.liquibase>3.5.3</version.liquibase>
+    <version.liquibase>3.5.5</version.liquibase>
     <version.jta>1.1</version.jta>
     <version.ehcache>2.7.1</version.ehcache>
     <version.cucumber>1.2.5</version.cucumber>
@@ -104,7 +104,7 @@
   <ciManagement>
     <system>Travis CI</system>
     <url>https://travis-ci.org/dadrus/jpa-unit</url>
-    <notifiers />
+    <notifiers/>
   </ciManagement>
 
   <developers>
