@@ -407,7 +407,7 @@
 		<scmPubCheckoutDirectory>${user.home}/sites/scm/hapi-fhir</scmPubCheckoutDirectory>
 
 		<!-- Dependency Versions -->
-		<derby_version>10.14.1.0</derby_version>
+		<derby_version>10.14.2.0</derby_version>
 		<jaxb_api_version>2.3.0</jaxb_api_version>
 		<jaxb_core_version>2.3.0</jaxb_core_version>
 		<jersey_version>2.25.1</jersey_version>
