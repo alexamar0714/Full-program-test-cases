@@ -362,7 +362,7 @@
                 <!-- For our in-memory testing, we're using HSQLDB -->
                 <groupId>org.hsqldb</groupId>
                 <artifactId>hsqldb</artifactId>
-                <version>2.3.4</version>
+                <version>2.7.1</version>
             </dependency>
             <dependency>
                 <groupId>cglib</groupId>
