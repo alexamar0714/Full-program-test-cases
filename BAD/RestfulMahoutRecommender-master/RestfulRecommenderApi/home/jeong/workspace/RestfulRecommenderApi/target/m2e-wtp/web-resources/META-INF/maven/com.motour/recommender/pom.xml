@@ -18,7 +18,7 @@
 				<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-			<version>4.3.8.RELEASE</version>
+			<version>5.2.24.RELEASE</version>
 			<exclusions>
 				<!-- Exclude Commons Logging in favor of SLF4j -->
 				<exclusion>
@@ -30,7 +30,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
-			<version>4.3.8.RELEASE</version>
+			<version>5.2.24.RELEASE</version>
 		</dependency>
 				
 		<!-- AspectJ -->
