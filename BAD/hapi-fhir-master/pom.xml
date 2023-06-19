@@ -508,7 +508,7 @@
 			<dependency>
 				<groupId>com.google.guava</groupId>
 				<artifactId>guava</artifactId>
-				<version>23.0</version>
+				<version>32.0.0-android</version>
 			</dependency>
 			<dependency>
 				<groupId>com.phloc</groupId>
@@ -1341,7 +1341,7 @@
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<ignore></ignore>
+										<ignore/>
 									</action>
 								</pluginExecution>
 								<pluginExecution>
@@ -1360,7 +1360,7 @@
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<ignore></ignore>
+										<ignore/>
 									</action>
 								</pluginExecution>
 								<!-- 
@@ -1603,7 +1603,7 @@
 								</replace>
 								<echo>Adding Syntax Highlighter</echo>
 								<replace dir="target/site" summary="true">
-									<include name="*.html"></include>
+									<include name="*.html"/>
 									<replacetoken><![CDATA[</body>]]></replacetoken>
 									<replacevalue><![CDATA[
 <script type="text/javascript">
@@ -1645,7 +1645,7 @@
 							<target>
 								<echo>Adding Google analytics in target/site for &lt;body&gt;</echo>
 								<replace dir="target/site" summary="true">
-									<include name="**/*.html"></include>
+									<include name="**/*.html"/>
 									<replacefilter token="#build#" value="${label}"/>
 									<replacefilter token="#version#" value="${project.version}"/>
 									<replacetoken><![CDATA[</body>]]></replacetoken>
@@ -1667,7 +1667,7 @@
 								</replace>
 								<echo>Adding Google analytics in target/site for &lt;BODY&gt;</echo>
 								<replace dir="target/site" summary="true">
-									<include name="**/*.html"></include>
+									<include name="**/*.html"/>
 									<replacetoken><![CDATA[</BODY>]]></replacetoken>
 									<replacevalue><![CDATA[
 <script>
