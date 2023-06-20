@@ -41,7 +41,7 @@
     <version.deltaspike>1.7.2</version.deltaspike>
     <version.weld>2.3.5.Final</version.weld>
     <version.commons-lang3>3.6</version.commons-lang3>
-    <version.guava>23.0</version.guava>
+    <version.guava>32.0.0-android</version.guava>
     <version.flywaydb>4.2.0</version.flywaydb>
     <version.liquibase>3.5.3</version.liquibase>
     <version.jta>1.1</version.jta>
@@ -104,7 +104,7 @@
   <ciManagement>
     <system>Travis CI</system>
     <url>https://travis-ci.org/dadrus/jpa-unit</url>
-    <notifiers />
+    <notifiers/>
   </ciManagement>
 
   <developers>
