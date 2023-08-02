@@ -168,7 +168,7 @@
         <dependency>
             <groupId>org.thymeleaf</groupId>
             <artifactId>thymeleaf</artifactId>
-            <version>3.0.7.RELEASE</version>
+            <version>3.1.2.RELEASE</version>
         </dependency>
 
         <!-- Spring Web is used to deploy the server to a web container. -->
