@@ -16,7 +16,7 @@
         <dep.spring.version>4.2.7.RELEASE</dep.spring.version>
         <dep.jetty.version>9.0.5.v20130815</dep.jetty.version>
         <dep.jackson.version>1.9.13</dep.jackson.version>
-        <dep.hadoop.version>2.7.1</dep.hadoop.version>
+        <dep.hadoop.version>2.10.0</dep.hadoop.version>
         <dep.hive.version>1.2.2</dep.hive.version>
         <dep.postgresql.version>9.4.1207</dep.postgresql.version>
         <jdk.version>1.8</jdk.version>
