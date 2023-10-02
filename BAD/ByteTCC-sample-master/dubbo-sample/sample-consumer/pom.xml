@@ -21,7 +21,7 @@
 		<dependency>
 			<groupId>org.bytesoft</groupId>
 			<artifactId>bytetcc-supports-dubbo</artifactId>
-			<version>0.4.1</version>
+			<version>0.5.0</version>
 			<exclusions>
 				<exclusion>
 					<groupId>org.springframework</groupId>
@@ -102,7 +102,7 @@
 		<dependency>
 			<groupId>com.101tec</groupId>
 			<artifactId>zkclient</artifactId>
-			<version>0.5</version>
+			<version>0.10</version>
 		</dependency>
 
 		<!-- spring -->
@@ -138,7 +138,7 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>4.3.11.Final</version>
+			<version>5.1.17.Final</version>
 		</dependency>
 
 		<!-- <dependency> -->
