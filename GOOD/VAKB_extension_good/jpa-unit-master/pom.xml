@@ -33,7 +33,7 @@
     <version.codemodel>2.6</version.codemodel>
     <version.h2>1.4.196</version.h2>
     <version.eclipselink>2.5.2</version.eclipselink>
-    <version.hibernate4>4.2.21.Final</version.hibernate4>
+    <version.hibernate4>5.1.17.Final</version.hibernate4>
     <version.hibernate5>5.2.8.Final</version.hibernate5>
     <verions.hibernate-ogm>5.2.0.Alpha1</verions.hibernate-ogm>
     <version.sqlite>3.20.0</version.sqlite>
@@ -104,7 +104,7 @@
   <ciManagement>
     <system>Travis CI</system>
     <url>https://travis-ci.org/dadrus/jpa-unit</url>
-    <notifiers />
+    <notifiers/>
   </ciManagement>
 
   <developers>
