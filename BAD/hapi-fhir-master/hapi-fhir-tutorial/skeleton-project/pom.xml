@@ -34,7 +34,7 @@
 		<dependency>
 			<groupId>ca.uhn.hapi.fhir</groupId>
 			<artifactId>hapi-fhir-base</artifactId>
-			<version>0.7</version>
+			<version>3.0.0</version>
 		</dependency>
 		<!-- 
 		Beginning in HAPI 0.8, at least one "structures" JAR must also be included.
