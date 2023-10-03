@@ -41,7 +41,7 @@
 		<dependency>
 			<groupId>ca.uhn.hapi.fhir</groupId>
 			<artifactId>hapi-fhir-structures-hl7org-dstu2</artifactId>
-			<version>3.3.0-SNAPSHOT</version>
+			<version>4.0.0</version>
 			<optional>true</optional>
 		</dependency>
 		<dependency>
