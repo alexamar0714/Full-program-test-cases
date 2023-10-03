@@ -92,7 +92,7 @@
              versions, after all - it is not affecting production
              code. -->
         <!--<hibernate.version>5.1.0.Final</hibernate.version>-->
-        <hibernate.version>4.1.6.Final</hibernate.version>
+        <hibernate.version>5.1.17.Final</hibernate.version>
 
         <!-- Plese don't upgrade from 3.2.x; it leads to test problems. -->
         <!--<spring.version>4.2.6.RELEASE</spring.version>-->
