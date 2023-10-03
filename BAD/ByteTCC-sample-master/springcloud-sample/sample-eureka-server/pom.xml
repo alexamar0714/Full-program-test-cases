@@ -13,7 +13,7 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka-server</artifactId>
-			<version>1.3.0.RELEASE</version>
+			<version>1.4.0.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -30,7 +30,7 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-netflix-eureka-server</artifactId>
-			<version>1.3.0.RELEASE</version>
+			<version>4.0.0</version>
 			<exclusions>
 				<exclusion>
 					<groupId>com.sun.jersey.contribs</groupId>
