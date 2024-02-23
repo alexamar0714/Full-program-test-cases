@@ -13,7 +13,7 @@
 
     <properties>
         <mainClass>cn.edu.ruc.iir.rainbow.web.server.RwServer</mainClass>
-        <dep.spring.version>4.2.7.RELEASE</dep.spring.version>
+        <dep.spring.version>5.3.32</dep.spring.version>
         <dep.jetty.version>9.0.5.v20130815</dep.jetty.version>
         <dep.jackson.version>1.9.13</dep.jackson.version>
         <dep.hadoop.version>2.7.1</dep.hadoop.version>
