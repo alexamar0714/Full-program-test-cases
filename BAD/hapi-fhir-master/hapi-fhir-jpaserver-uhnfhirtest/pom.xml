@@ -18,7 +18,7 @@
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
-			<version>9.4.1212.jre7</version>
+			<version>42.2.28.jre7</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.derby</groupId>
@@ -202,15 +202,15 @@
 							<pluginExecutions>
 								<pluginExecution>
 									<pluginExecutionFilter>
-										<groupId></groupId>
-										<artifactId></artifactId>
+										<groupId/>
+										<artifactId/>
 										<versionRange>[0.4,)</versionRange>
 										<goals>
-											<goal></goal>
+											<goal/>
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<ignore></ignore>
+										<ignore/>
 									</action>
 								</pluginExecution>
 							</pluginExecutions>
