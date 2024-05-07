@@ -51,7 +51,7 @@
         <compiler.fork>false</compiler.fork>
         <maven-compiler-plugin-version>3.5.1</maven-compiler-plugin-version>
         <junit.version>4.12</junit.version>
-        <slf4j.version>1.7.21</slf4j.version>
+        <slf4j.version>2.0.13</slf4j.version>
         <camel.version>2.18.1</camel.version>
         <opentable.version>0.7.1</opentable.version>
     </properties>
