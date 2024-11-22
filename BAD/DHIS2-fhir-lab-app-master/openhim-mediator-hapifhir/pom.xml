@@ -7,7 +7,7 @@
 <properties>
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   <!-- Dependency Versions -->
-  <hapi_fhir_version>2.3-SNAPSHOT</hapi_fhir_version>
+  <hapi_fhir_version>5.0.2</hapi_fhir_version>
   <scala.version>2.12.4</scala.version>
 </properties>
   <parent>
