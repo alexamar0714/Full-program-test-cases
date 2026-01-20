@@ -18,12 +18,12 @@
         <skipTests>false</skipTests>
         <!-- jar version -->
         <spring.version>4.3.7.RELEASE</spring.version>
-        <spring.boot.version>1.5.3.RELEASE</spring.boot.version>
+        <spring.boot.version>3.3.7</spring.boot.version>
         <aspectj.version>1.8.10</aspectj.version>
         <mybatis.version>3.4.2</mybatis.version>
         <mybatis.spring.version>1.3.1</mybatis.spring.version>
         <slf4j.version>1.7.25</slf4j.version>
-        <fastjson.version>1.2.24</fastjson.version>
+        <fastjson.version>1.2.48</fastjson.version>
         <mysql.version>5.1.34</mysql.version>
         <junit.version>4.12</junit.version>
         <pagehelper.verion>5.0.0</pagehelper.verion>
