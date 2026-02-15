@@ -22,7 +22,7 @@
         <org.json.json.version>20140107</org.json.json.version>
         <org.json.simple.version>1.1.1</org.json.simple.version>
         <org.dom4j.version>1.6.1</org.dom4j.version>
-        <org.jaxen.version>1.1.1</org.jaxen.version>
+        <org.jaxen.version>1.1.6</org.jaxen.version>
     </properties>
 
     <build>
