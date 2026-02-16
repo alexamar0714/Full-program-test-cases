@@ -14,7 +14,7 @@
     <properties>
         <jdk.version>1.8</jdk.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <mainClass></mainClass>
+        <mainClass/>
     </properties>
 
     <dependencies>
@@ -79,7 +79,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.31</version>
+            <version>1.2.83</version>
         </dependency>
     </dependencies>
 
